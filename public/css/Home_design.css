@@ -8,9 +8,14 @@ body {
     /*gradiente*/
     /*background-image: linear-gradient(to bottom right, #BDE0FE,#FFC8DD);*/
 }
-/* header come è composto?? */
 /* viene messo con un tot in percentuale di larghezza e di alteza 3 rem, i margini in automatico, e dal basso 1 rem */
 
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 /*
     Questo header è un flexbox che contiene nav, logo e la searchbar. Si utilizza 'display: flex' per rendere la sezione un "container"
@@ -28,15 +33,14 @@ header {
     position: sticky;
     font-family: 'Lexend', sans-serif;
     top: 0;
-    height: 5rem;
-    width: 100%;
-    display: inline-flex;
+    height: 55px;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 0;
     background: #593959;
-    /* aumenta la z di 10, in modo che è più in alto degli altri elementi*/
+    /*z index alza la header in verticale, in modo che passa davanti  a tutto il contenuto*/
     z-index: 10;
 }
 
@@ -45,7 +49,7 @@ header {
 */
 nav{
     display: flex;
-    flex-grow: 3;
+    flex-grow: 2.3;
     justify-content: flex-end;
     align-items: center;
     /*border: 2px solid rgb(51, 255, 0);*/
@@ -60,7 +64,6 @@ nav{
     display: flex;
     align-items: center;
     list-style-type: none;
-    float: right;
     /*border: 1px solid rgb(255, 26, 26);*/
 }
 
@@ -70,11 +73,12 @@ nav{
 .logo{
     padding: 5px 0;
     display: flex;
-
-    width: 3rem;
-    height: 3rem;
+    flex-grow: 1;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
     float:left;
-    position: relative;
+    /*border: 2px solid red;*/
 }
 
 /*
@@ -82,12 +86,9 @@ nav{
 */
 .searchbar{
     display: flex;
-    flex-grow: 17;
+    flex-grow: 4;
     justify-content: flex-end;
-    margin-left: -30%;
-
     /*border: 2px solid red;*/
-
 }
 
 /*
@@ -99,9 +100,6 @@ nav{
     flex-direction: row;
     padding: .3rem 10%;
     font-size: .9rem;
-    background-color: #FFFFFF;
-
-
 }
 
 /*
@@ -111,7 +109,7 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*border: 1px solid blue;*/
+    border: 0 solid blue;
 }
 
 /*
@@ -125,7 +123,7 @@ li a{
 }
 
 /*
-    li a:hover definisce come diventano gli elementi 'a' quanod il cursore si trova su di essi
+    li a:hover definisce come diventano gli elementi 'a' quando il cursore si trova su di essi
 */
 li a:hover{
     font-family: 'Lexend', sans-serif;
@@ -134,14 +132,19 @@ li a:hover{
     transition: 0.5s;
 }
 
+.catalogo_link{
+    color:#593959;
+    background-color: #d4d4d4;
+}
+
 .container1
 {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-right: 1rem;
-    border-color: red;
-    border-style: solid;
+    border:2px solid blue;
+    
 }
 @media (max-width: 850px) {
     .container1 {
@@ -152,11 +155,9 @@ li a:hover{
 {
     float: left;
     position: relative;
-
     flex: 1 0 10rem;
     margin: 1rem 1rem 1rem 1rem;
-    border-style: solid;
-    border-color: red;
+    border: 2px solid purple;
     align-items: center;
     justify-content: center;
 }
@@ -164,14 +165,15 @@ li a:hover{
 {
     width: 65rem;
     height: auto;
-
 }
 .chisiamo
 {
+    margin: 1rem 1rem 1rem 1rem;
+    border: 2px solid green;
     float:right;
     position: relative;
-    font-family: "Al Bayan";
-    text-align: justify;
+    font-family: 'Lexend', sans-serif;
+    text-align:left;
     flex:1 0 10rem;
 }
 /* carosello */
